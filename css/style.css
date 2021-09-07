@@ -1,0 +1,423 @@
+/* 
+1. Posicionamiento (position:...)
+2. Modelo caja (box model dimension)
+3. Tipografía (tipo de letra etc)
+4. Visuales (efectos visuales)
+5. Otros (misc)
+*/
+:root {
+  /* Colores */
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
+  --black: #282623;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Header */
+
+header {
+  /* Position */
+  position: relative;
+  /* Organización de los elementos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Dimensiones del elemento */
+  height: 33.4rem;
+  width: 100%;
+  /* Decoración */
+  background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+  /* Dimensiones mínimas */
+  min-width: 3.2rem;
+  min-height: 33.4rem;
+  /* Margin y padding innecesario */
+}
+
+/* Header -> Contenedor Interno */
+
+.header__title-container {
+  /* Margin y padding */
+  margin: 0 2em;
+}
+
+.header__title-container h1 {
+  margin: 1em 0;
+  font-size: 2.4rem;
+  color: var(--just-white);
+}
+
+.header__title-container p {
+  font-size: 1.4rem;
+  color: var(--soft-orange);
+  font-weight: 500;
+}
+
+/* Header -> Botón */
+
+.header__button {
+  /* Position */
+  position: absolute;
+  /* Margin y padding */
+  top: calc(100% - 2em);
+  padding: 1.5em;
+  /* Fondo */
+  background: #faf8f7;
+  /* Decoración -> Sombra */
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 4px;
+  /* Tipo de letra, tamaño y color */
+  font-size: 1.4rem;
+  color: var(--warm-black);
+  font-weight: 700;
+}
+
+/* Main -> Sección tasas */
+
+main {
+  height: auto;
+  width: 100%;
+  background-color: var(--off-white);
+}
+
+.tasas {
+  width: 90%;
+  min-width: 320px;
+  margin: 0 auto;
+  /* Organización de los elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Tasas -> Imagen BTC */
+.tasas__img-btc {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Márgen */
+  margin: 6em 0 5em 0;
+}
+
+.tasas h1 {
+  font-size: 2.4rem;
+  color: var(--warm-black);
+}
+
+.tasas p {
+  margin: 1.5em;
+  font-size: 1.4rem;
+  color: #757575;
+}
+
+/* Tasas -> Tabla */
+
+.table__container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.tasas__table {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.tasas__table h2 {
+  color: #ff9536;
+  font-size: 1.8rem;
+}
+
+.tasas__table td {
+  width: 50%;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: #b5b0ac;
+  font-size: 1.6rem;
+  color: var(--grey);
+  background-color: var(--just-white);
+}
+
+.tasas__img-bajada {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-size: cover;
+  background-image: url("../assets/icons/trending-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tasas__img-subida {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-size: cover;
+  background-image: url("../assets/icons/trending-up.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Tasas -> actualización */
+
+.tasas__act {
+  /* Organización */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Tamaño y altura */
+  width: 17.3rem;
+  height: 3.1rem;
+  /* Decoración */
+  font-family: "Inter", sans-serif;
+  background-color: var(--soft-orange);
+  font-size: 1.2rem;
+  /* Margin */
+  margin-top: 2.4em;
+  margin-bottom: 5em;
+  border-radius: 2px;
+}
+
+.tasas__act span {
+  font-weight: 400;
+}
+
+/* Main info */
+
+.main__info {
+  background-color: var(--warm-black);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__info-title {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: var(--just-white);
+  font-size: 2.4rem;
+}
+
+.main__info-p {
+  text-align: center;
+  color: #808080;
+  font-size: 1.4rem;
+}
+
+/* Contenedor de las cards */
+
+.main__info-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 320px;
+  margin: 2em 0 2em 0;
+}
+
+/* Main info cards */
+
+.main__info-card {
+  background-color: #282623;
+  padding: 1.6em;
+  margin: 1.6em;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.main__info-card h2 {
+  color: var(--just-white);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.main__info-card p {
+  color: #808080;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.main__info.card img {
+  height: 20px;
+  width: 20px;
+}
+
+/* Main -> Conocelo */
+
+.main__conocelo {
+  height: 50vh;
+  width: 100%;
+  background-image: url("../assets/imgs/bitcoinbaby2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.main__conocelo h1 {
+  padding-top: 3em;
+  color: var(--just-white);
+  font-size: 2.4rem;
+}
+
+/* Main  -> Planes */
+
+.main__planes {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--off-white);
+  margin: 5em 1em 0 1em;
+  text-align: center;
+  align-items: center;
+}
+
+.main__planes h1 {
+  font-size: 2.4rem;
+  color: var(--warm-black);
+  margin-bottom: 1em;
+}
+
+.main__planes p {
+  color: #757575;
+  font-size: 1.4rem;
+}
+
+/* Contenedor de cartas de planes */
+
+.main__planes-todos {
+  text-align: center;
+  width: 75%;
+  display: flex;
+  height: 316px;
+  /* Gap para el scroll, es experimental esta parte */
+  /* gap: 50px; */
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+/* Carta de planes */
+
+.main__planes-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /* Animacion del scroll */
+  scroll-snap-align: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px silver;
+  padding: 4em 2em 2em 2em;
+  max-width: 250px;
+  margin: 3em 2em 0 auto;
+  min-width: 210px;
+  max-height: 260px;
+}
+
+/* Decoración de tarjeta */
+.main__planes-card h1 {
+  font-size: 5.2rem;
+  margin-bottom: 0.2em;
+}
+
+.main__planes-card h1 span {
+  position: relative;
+  font-size: 1.2rem;
+  bottom: 2em;
+}
+
+.main__planes-card p {
+  margin-bottom: 1em;
+}
+
+/* Botón recomendados */
+
+.main__planes-recomendado {
+  position: absolute;
+  bottom: calc(100% - 1.7em);
+  background-color: var(--bitcoin-orange);
+  border-radius: 1.2em;
+  padding: 1em;
+}
+.main__planes-recomendado h2 {
+  font-size: 1.2rem;
+  color: var(--just-white);
+  font-weight: 700;
+}
+
+/* Botón de escoger */
+
+.main__planes-card-button {
+  font-size: 1.4rem;
+  background-color: var(--off-white);
+  border: 0.15em solid var(--bitcoin-orange);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.main__planes-card-button span {
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  background-size: cover;
+  background-image: url("../assets/icons/orange-right-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0.1em;
+  vertical-align: text-bottom;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  width: 100%;
+  background-color: var(--bitcoin-orange);
+  padding: 3em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__links p {
+  color: var(--just-white);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+footer img {
+  width: 40px;
+  height: 25px;
+}
+
+.footer__img p {
+  font-size: 0.8rem;
+  color: var(--soft-orange);
+}
